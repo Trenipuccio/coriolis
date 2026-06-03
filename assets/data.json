@@ -1,0 +1,947 @@
+{
+  "origins": {
+    "11": {
+      "desc": "The decrepit halls of an Orphanage",
+      "location": "Orphanage",
+      "talent": "Stealthy"
+    },
+    "12": {
+      "desc": "In the depths of a Mining Colony",
+      "location": "Minig Colony",
+      "talent": "Miner"
+    },
+    "15": {
+      "desc": "Under the sunless sky of the Far Colonies",
+      "location": "Far Colonies",
+      "talent": "Endurance"
+    },
+    "23": {
+      "desc": "Among the alleys and shanties of Aluminum Bay",
+      "location": "Aluminium Bay",
+      "talent": "Actor"
+    },
+    "32": {
+      "desc": "Under the iron sky of the Dome",
+      "location": "The Dome",
+      "talent": "Acrobat"
+    },
+    "41": {
+      "desc": "Somewhere in the eternal fog of the Haze",
+      "location": "The Haze",
+      "talent": "Sleight of Hand"
+    },
+    "46": {
+      "desc": "Among the hulks and wrecks of Hull Town",
+      "location": "Hull Town",
+      "talent": "Exo-Specialist"
+    },
+    "54": {
+      "desc": "Deep inside the factory city of the Turbine Halls",
+      "location": "Turbine Halls",
+      "talent": "Mechanic"
+    },
+    "56": {
+      "desc": "In the purple meadows of the Cave Gardens",
+      "location": "Cave Gardens",
+      "talent": "Botanist"
+    },
+    "62": {
+      "desc": "In the eternal dusk of the Inner Sanctum",
+      "location": "Inner Sanctum",
+      "talent": "Cultural Savant"
+    },
+    "64": {
+      "desc": "In the Lighthouse on the edge of the dark",
+      "location": "The Lighthouse",
+      "talent": "Lookout"
+    },
+    "65": {
+      "desc": "Among the hulks of a Scavenger Herd",
+      "location": "Scavenger Herd",
+      "talent": "Zero-G Training"
+    },
+    "66": {
+      "desc": "In the depths of a Greatship",
+      "location": "Greatship",
+      "talent": "Shuttle Pilot"
+    }
+  },
+  "professions": {
+    "1": {
+      "name": "Artist",
+      "key_attr": "Empathy",
+      "talents": [
+        "Acrobat",
+        "Charmer",
+        "Cultural Savant",
+        "Renowned"
+      ]
+    },
+    "2": {
+      "name": "Enforcer",
+      "key_attr": "Agility",
+      "talents": [
+        "Any combat talent",
+        "Commander",
+        "Evasive",
+        "Medic"
+      ]
+    },
+    "3": {
+      "name": "Esoteric",
+      "key_attr": "Insight",
+      "talents": [
+        "Actor",
+        "Botanist",
+        "Cultural Savant",
+        "Librarian"
+      ]
+    },
+    "4": {
+      "name": "Odd Jobber",
+      "key_attr": "Empathy",
+      "talents": [
+        "Actor",
+        "Charmer",
+        "Cultural Savant",
+        "Streetwise"
+      ]
+    },
+    "5": {
+      "name": "Roughneck",
+      "key_attr": "Strength",
+      "talents": [
+        "Endurance",
+        "Force",
+        "Jury-Rig",
+        "Scan Operator"
+      ]
+    },
+    "6": {
+      "name": "Scholar",
+      "key_attr": "Logic",
+      "talents": [
+        "Investigator",
+        "Librarian",
+        "Smart",
+        "Teratology"
+      ]
+    },
+    "7": {
+      "name": "Scoundrel",
+      "key_attr": "Perception",
+      "talents": [
+        "Acrobat",
+        "Charmer",
+        "Lookout",
+        "Stealthy"
+      ]
+    },
+    "8": {
+      "name": "Traveler",
+      "key_attr": "Perception",
+      "talents": [
+        "Driver",
+        "Mechanic",
+        "Exo-Specialist",
+        "Zero-G Training"
+      ]
+    }
+  },
+  "prof_names": {
+    "1": [
+      {
+        "first": "Iosop",
+        "last": "Berin"
+      },
+      {
+        "first": "Picar",
+        "last": "Harkoum"
+      },
+      {
+        "first": "Alvereto",
+        "last": "Misiopio"
+      },
+      {
+        "first": "Charita",
+        "last": "Dargar"
+      },
+      {
+        "first": "Yisma",
+        "last": "Coumar"
+      },
+      {
+        "first": "Demetria",
+        "last": "Kalventer"
+      }
+    ],
+    "2": [
+      {
+        "first": "Aquilah",
+        "last": "Andromonos"
+      },
+      {
+        "first": "Verlof",
+        "last": "Özkal"
+      },
+      {
+        "first": "Hazran",
+        "last": "Hassmara"
+      },
+      {
+        "first": "Sighra",
+        "last": "Kourkouti"
+      },
+      {
+        "first": "Metilla",
+        "last": "Perkantrem"
+      },
+      {
+        "first": "Garida",
+        "last": "Goulima"
+      }
+    ],
+    "3": [
+      {
+        "first": "Meristo",
+        "last": "Espenter"
+      },
+      {
+        "first": "Orou ",
+        "last": "Koulas"
+      },
+      {
+        "first": "Radour",
+        "last": "Fazrami"
+      },
+      {
+        "first": "Jesina",
+        "last": "Marcoloroux"
+      },
+      {
+        "first": "Yarah",
+        "last": "Yasman"
+      },
+      {
+        "first": "Mieram",
+        "last": "Ipoletes"
+      }
+    ],
+    "4": [
+      {
+        "first": "Chandra",
+        "last": "Nemkassur"
+      },
+      {
+        "first": "Dharr",
+        "last": "Kavour"
+      },
+      {
+        "first": "Margou",
+        "last": "N’rama"
+      },
+      {
+        "first": "Steem",
+        "last": "Soltev"
+      },
+      {
+        "first": "Vasil",
+        "last": "Koulidis"
+      },
+      {
+        "first": "Xemene",
+        "last": "Zhou"
+      }
+    ],
+    "5": [
+      {
+        "first": "Jurji",
+        "last": "Mammahr"
+      },
+      {
+        "first": "Amman",
+        "last": "Ahsouli"
+      },
+      {
+        "first": "Geov",
+        "last": "Christofor"
+      },
+      {
+        "first": "Gorgija",
+        "last": "Mell"
+      },
+      {
+        "first": "Asmirad",
+        "last": "Iortis"
+      },
+      {
+        "first": "Fassour",
+        "last": "Belkovoro"
+      }
+    ],
+    "6": [
+      {
+        "first": "Aramande",
+        "last": "Aramiz"
+      },
+      {
+        "first": "Cantara",
+        "last": "Loutreides"
+      },
+      {
+        "first": "Janousch",
+        "last": "Thyrum"
+      },
+      {
+        "first": "Leito",
+        "last": "Jorbana"
+      },
+      {
+        "first": "Keityl",
+        "last": "Miesma"
+      },
+      {
+        "first": "Samsand",
+        "last": "Pertesses"
+      }
+    ],
+    "7": [
+      {
+        "first": "Aruma",
+        "last": "mir- Caph"
+      },
+      {
+        "first": "Etila",
+        "last": "Xem"
+      },
+      {
+        "first": "Jevgi",
+        "last": "Ramastan"
+      },
+      {
+        "first": "Kef",
+        "last": "Koud"
+      },
+      {
+        "first": "Salamana",
+        "last": "Zerzim"
+      },
+      {
+        "first": "Wallih",
+        "last": "din-Tallah"
+      }
+    ],
+    "8": [
+      {
+        "first": "Dacos",
+        "last": "Lesmodere"
+      },
+      {
+        "first": "Juvero",
+        "last": "Quiro"
+      },
+      {
+        "first": "Hamza",
+        "last": "Rosmahneh"
+      },
+      {
+        "first": "Farzine",
+        "last": "Ashrum"
+      },
+      {
+        "first": "Nilette",
+        "last": "Semili"
+      },
+      {
+        "first": "Sahma",
+        "last": "Nour"
+      }
+    ]
+  },
+  "prof_equip": {
+    "1": [
+      "Music instrument, notebook and pen, a bottle of grass wine",
+      "Exquisite clothing, rare collection of poems, make-up",
+      "Fine tools, magnifying glass, set of paints"
+    ],
+    "2": [
+      "Fusillard pistol, MediKit (basic), small shield",
+      "Coiler rifle, vision scope, camouflage net",
+      "Fusillard carbine, reinforced exo-helmet, stun grenade"
+    ],
+    "3": [
+      "5 doses of smelling spice, pipe, antidote",
+      "Bird candy, star chart, deck of cards",
+      "Revolutionary pamphlets, fusillard cricket, flask with Makh spirits"
+    ],
+    "4": [
+      "Fancy clothing, waking pills, bottle of shroom brandy",
+      "Cooking utensils, 5 doses of orchid dust, large backpack",
+      "Accounting ledger, flight suit, MediKit (basic)"
+    ],
+    "5": [
+      "Exo suit, welding torch, fine tools",
+      "Slim suit, adhesive gloves, vacuum sealer",
+      "Heavy tools, pickaxe, breach charge"
+    ],
+    "6": [
+      "Portable lab, MediKit (basic), old paper journal",
+      "Astrolabe, cartographer’s kit, compass",
+      "Info cube, fancy clothing, waking pills"
+    ],
+    "7": [
+      "Fusillard cricket, fake Guild ID, proximity sweeper",
+      "Heavy tools, lockpicks, flamer",
+      "Chemical kit, 5 doses of orchid dust, breathing mask"
+    ],
+    "8": [
+      "Flight suit, short story collection, MediKit",
+      "Fine tools, waking pills, recon kite",
+      "Portable sensor display, multi-wrench,astro-compass"
+    ]
+  },
+  "prof_specs": {
+    "1": [
+      {
+        "name": "Hull Painter",
+        "desc": "Where others see the world in shades of gray, you see it bathed in rich colors. Cerulean blue fountains spreading life in the Gardens, the blood red roof of the Inner Sanctum, the golden amber of the magnetic field of Ship City. You found work as a hull painter, bringing life to the giant husks of the old spacefarers. The work was dangerous and the pay low, but you found satisfaction in bringing color to the emptiness of the Great Dark.",
+        "talent": "Zero- G Training"
+      },
+      {
+        "name": "Staircase Poet",
+        "desc": "You always had a way with words and it was on the steep stairs of the Chasm that you found your calling. It was when you stood on the steps with the wind in your hair and the rush of people around you that you felt alive. You barely made a living but you could come and go as you liked, met friends for life and maybe even made an enemy or two.",
+        "talent": "Charmer"
+      },
+      {
+        "name": "Maidy Row Balladeer",
+        "desc": "Since you were just a brat, you were always humming some tune or another. The moment you got your hands on the neighbor’s cittra, you took to playing it. And Ship City, as bleak as it is, desperately needed people like you. Your songs – soothing ballads, rousing anthems, or lighthearted choruses – helped people get by. They fell in love, dreamed of a brighter future, and, for a moment, forgot that they were living in a city at the end of nowhere.",
+        "talent": "Musician"
+      },
+      {
+        "name": "Alley Theater Actor",
+        "desc": "You had always been a bit of a rascal. Whether impersonating vendors, constables, or even Guild patrols, it didn’t take long to realize your true gift – acting. Before you knew it, you were a regular in the small alley theaters scattered throughout the Chasm. You started with supporting roles, but soon you found yourself as the lead. Like many in the scene, you became familiar with grass wine and the occasional puff, diving deeper into your roles and seeking inspiration for the next performance.",
+        "talent": "Disguise"
+      },
+      {
+        "name": "Occasional Publisher",
+        "desc": "The pen is mightier than a fusillard – or at least the printing press is. As an adolescent, you shouted at the top of your lungs, hawking the latest gossip pamphlet in the chaotic streets of the Serpentine. Over time, you worked your way up – from typesetter to writer to assistant editor – and learned the delicate balance of being a good publisher: making stories juicy enough to grab attention and avoid backlash, yet newsworthy enough to outshine the competition's rags.",
+        "talent": "Librarian"
+      },
+      {
+        "name": "Machine Artisan",
+        "desc": "Mechanical Row was always your favorite quarter – the sounds of hammers, winding machines and the creaking and crunching of cogs and springs. Building simple automata, lighting contraptions or more usable items as lifting harnesses or mechanical chisels, you shortly expanded your talent and know-how – to the point of getting custom jobs and creating ever more brilliant devices.",
+        "talent": "Jury- Rig"
+      }
+    ],
+    "2": [
+      {
+        "name": "Zapti Constable",
+        "desc": "The law stands above all, at least Guild law. And you were the law, its long arm and enforcer. Appointed by the Guilds, you independently ran a borough, patrolling, talking to residents, or staring down delinquents. Sometimes you had to intervene and draw your fusillard revolver, and in the rarest cases, even call in the Guild militia as reinforcements.",
+        "talent": "Interrogator"
+      },
+      {
+        "name": "Guild Militia",
+        "desc": "The Guilds controlled Ship City, and you were their enforcer. When something needed protection, surveillance, or, in the worst-case scenario, retrieval for the Guild, you and your fellow watchmen handled it. You could deal with any opposition, but most of the time, there wasn’t any. Most days, you just patrolled – dull, routine, and monotonous work.",
+        "talent": "Lookout"
+      },
+      {
+        "name": "Fusillard Protector",
+        "desc": "Protection was your life. You provided it directly by shielding your client from attacks by malicious thugs, wrecker crews, or even worse, or indirectly by eliminating threats before they could cause harm. Your handling of the fusillard gun was unprecedented. The combination of the fusillard with your armor and shield made you a formidable force to be reckoned with in every situation.",
+        "talent": "Bodyguard"
+      },
+      {
+        "name": "Guild Investigator",
+        "desc": "Everything is not as it seems – you knew this from experience. You solved the Guild's more complex problems, crimes from within or without. You liked to think you were one of the best, but the truth was somewhere in between, even though you actually solved some cases. It wasn’t enough to get by, so you did some private work on the side and took commissions from private patrons.",
+        "talent": "Investigator"
+      },
+      {
+        "name": "Coriolite Guard",
+        "desc": "Guarding the families was no simple task. It wasn’t just about keeping watch – it required mastering the noble art of presentation, marching in formation, and maintaining proper composure during receptions and events. You learned to do it all, and with a certain flair, while keeping your skills as a guard sharp. Balancing both with ease, you achieved nothing short of excellence.",
+        "talent": "Polearms"
+      },
+      {
+        "name": "Bounty Hunter",
+        "desc": "Bounties are plentiful in the Lost Horizon, and you took advantage of that. Violent criminals, frauds, and the ubiquitous toads were always free targets. You had to be cunning, smart, and have rapport, and not be afraid to resort to violence or at least the threat of it. The hunt took you all across Jumuah, from the alleys of Ship City to the grottos of Hasrah Moon. In the end, what drove you was the thrill rather than the satisfaction of justice.",
+        "talent": "Streetwise"
+      }
+    ],
+    "3": [
+      {
+        "name": "Spice Engineer",
+        "desc": "The orchid dust changed everything, and you knew how to make it work. In your makeshift laboratory, tucked away in some alley or forgotten cul-de-sac, you experimented with ingredients gathered from gardeners, explorers, and the occasional expeditionary returnee. Some of your mixtures failed or didn’t perform as expected, but those were only minor setbacks on your path to success.",
+        "talent": "Laboratorist"
+      },
+      {
+        "name": "Bird Warden",
+        "desc": "Birds were everything to you. You understood them, or so other people thought. It actually took a lot of guesswork to learn their behaviors – but they worked just like regular folks. No magic involved. With your affinity for or insight into the things you were put in charge of, including ornithiums, ship's birds, and other critters – yes, not always birds, actually – you took your work seriously, you did.",
+        "talent": "Bird- Handler"
+      },
+      {
+        "name": "Coriolite Seer",
+        "desc": "You could tell the future. Or at least the way a Coriolite interpreted it – with many possibilities and nothing actually right or wrong. You used different paraphernalia to accomplish this: tea leaves, old bones, pseudo-algebra, or just regular dice. Of course, they were not regular in that sense – not the dice nor the tea. In your hands, they were full of truth- telling and, well, possibilities.",
+        "talent": "Intuition"
+      },
+      {
+        "name": "Revolutionary Prophet",
+        "desc": "You were the prophet of the masses, the one who would help them break free from the Guilds' control – or so the theory went. Your tools were your voice, your fiery rhetoric, and the fusillard gun at your side, though it was a dud you’d never use. If things went as planned, you'd lead the people toward liberation – assuming you didn’t end up imprisoned first.",
+        "talent": "Agitator"
+      },
+      {
+        "name": "Toad Dreamer",
+        "desc": "The truth was out there – just beyond your grasp. Unless, of course, you used orchid dust to tip the scales in your favor. You’d always been searching for something, and that something seemed to lie within the dreams conjured by the dust. You joined the Black Toad, hoping to uncover more, always chasing the next epiphany, the next batch of dust. Not an addict, but fully committed to the cause – your cause. One day soon, you would find the truth. Or so you believed. Maybe",
+        "talent": "Hardened"
+      },
+      {
+        "name": "Rim Zealot",
+        "desc": "There was no future in Jumuah. You and a precious few had the vision and audacity to suggest this. But it was easier for you out there on the Rim. You saw the Greatships depart but they never took anything with them, only brought the riches into the system. So it was up to you to make the people of the Colonies understand that they held the future in their callused hands. Leave Jumuah and expand the colonies to a better future.",
+        "talent": "Mentalist"
+      }
+    ],
+    "4": [
+      {
+        "name": "Guild Clerk",
+        "desc": "Let’s be honest – you hated your job. Mostly because you weren’t very good at it. You had only gotten it because your mother had a contact in the Guild. Now you were sorting mail, taking notes, and handling various tasks for an arrogant Guild master who only occasionally knew your name. The job wasn’t without benefits, though. You got to… – No, it was mostly useless. Your dream was to explore the universe. You drew star maps on your breaks, waiting for the chance to someday make it onto an exploring vessel.",
+        "talent": "Librarian"
+      },
+      {
+        "name": "Stair Peddler",
+        "desc": "You worked the steep stairs of the Chasm every morning, day and night. Sometimes you even slept there, rolled up in a blanket with the magnificent view of the Chasm’s glittering lights all around you. You sold what you could, and eventually got rather good at it. But most of all you observed the people around you, both good and bad.",
+        "talent": "Mentalist"
+      },
+      {
+        "name": "Ice Trader",
+        "desc": "You know a thing or two about ice. About its structure, composition and weight. You know its importance. After all, you traded it for a long time. Making sure that freighter captains got their cargo to the Bay in time, selling short ice bonds to Guilds and merchants alike. You learned that whoever controls the flow of ice, controls the people.",
+        "talent": "Barter"
+      },
+      {
+        "name": "Alley Cook",
+        "desc": "You could make a stew from almost anything, cook fungi to perfection, straight from the cave walls, and grill tasty skewers of those pesky prana-critters. Sure you had to move your small stall every other week when the Zapti got tired of you, and the pay was not very good. But with what you had, you did good. And so did your customers.",
+        "talent": "Cook"
+      },
+      {
+        "name": "Coriolite Servant",
+        "desc": "You have seen your fair share of pompous ceremonies, meticulous rituals and elaborate clothing, you sure have. Still, work as a servant to a Coriolite noble had its perks. You lived in a veritable palace in the gloom of the Inner Sanctum, were allowed to feast on the leftovers of your master’s expensive dinners and learned a lot about the ways of the Old Horizon.",
+        "talent": "Cultural Savant"
+      },
+      {
+        "name": "Artifact Dealer",
+        "desc": "You were always interested in things. Beautiful handmade objects instill a sense of calm in your soul. So you learned all you could about them and soon you knew more than your local shard peddler. The shelves of your small shop saw artifacts from all over the Charted Sphere, each with its own story. You have long since sold them off, but you still remember them. Sometimes you dream about them",
+        "talent": "Artifact Specialis"
+      }
+    ],
+    "5": [
+      {
+        "name": "Hull Guard",
+        "desc": "Spending long hours on the hull of a ship, like an encrusted barnacle, was your life. Always alert to Slipstream turbulence or the faint glow of Cherenkov radiation, your vigilance saved crews and ships from the dangers of the Great Dark or rogue tugships. But the long time in the Dark changed you, making you sensitive to bright lights, loud noises, and strong tastes. Now, you find comfort in the shadows, where a dark corner feels like home.",
+        "talent": "Lookout"
+      },
+      {
+        "name": "Wreck Diver",
+        "desc": "You had a knack for spotting entry points and deciphering blueprints just by looking at an old wreck. To you, every wreck was an intriguing spatial puzzle. Squeezing through tight spaces without damaging your exo-suit, you were always the first to find and secure treasures for your crewmates. With tools to cut, pry, and bend hull plates – or set precise charges to separate entire sections – you proved your skill in both reading schematics and the practical art of dismantling wrecks",
+        "talent": "Exo- Specialist"
+      },
+      {
+        "name": "Vacuum Welder",
+        "desc": "You like to melt things. Always did. You almost burnt down your childhood home when you “welded” your dad's fusillard gun to the gas stove. But you learned and you became a goddamn genius. In your mind you were like an ancient warrior, wielding your torch as a weapon. You became a freelance welder, welding for the big boys – The Guilds and whatnot. The more dangerous the mission, the better.",
+        "talent": "Zero- G Training"
+      },
+      {
+        "name": "Deep Miner",
+        "desc": "You were always wary of the starry skies. All that emptiness. As a kid you would build a fortress under your bed, later improving by digging through the floor to the neighbor below. After a terrifying ordeal out to the asteroids, you finally felt at home. Digging, burrowing and blasting down to the heart of it all. The riches don’t entice you, no, it’s the road down and the solid embrace of walls all around you that makes you tick.",
+        "talent": "Miner"
+      },
+      {
+        "name": "Crane Rat",
+        "desc": "You were always destined to climb. Though your memories are hazy, your mates recall it well – scaling ladders between districts or chasing thieves across rooftops. With no real direction, you eventually drifted to the harbors and the ‘Bay, where you found your calling with the crane rats. Climbing, jumping, and securing cargo became your routine, whether in an exo-suit or just a breathing mask – wherever the cranes reached, you followed.",
+        "talent": "Acrobat"
+      },
+      {
+        "name": "Machine Tender",
+        "desc": "Tinker not thinker, people used to say about you. Always with your nose deep down into a broken gadget or another. Your fingers deftly disassembled and reassembled any kind of machine, circuit board or gizmo in front of you. The theory behind how it all works was not for you. You had a knack for getting things to work, and steadily rose from kites, to hydroponic pumps, to reactors and even gravity generators.",
+        "talent": "Mechanic"
+      }
+    ],
+    "6": [
+      {
+        "name": "Guild Archivist",
+        "desc": "Why risk the dangers and inconveniences of traveling the Lost Horizon when a trove of knowledge lay hidden right beneath your feet? You realized early on that the Guilds knew more than they let on. All that information, all that data and bureaucracy – it had to be stored somewhere, and properly managed. Who better than you to oversee it? Archiving, cataloging, and organizing became your mission, and you carried it out with excellence.",
+        "talent": "Librarian"
+      },
+      {
+        "name": "Algebraist Apprentice",
+        "desc": "Since you were little you have always known there is something more to the Horizon. Something behind it all. When you studied the old art of al-jabr you discovered the threads that keep the universe together. You poured over old tomes, scribbled calculus on every surface you had within reach and, in the end, became an Algebraist. When you donned the traditional skull cap, you became someone of importance. Your work meant something. It still does.",
+        "talent": "Astrometry"
+      },
+      {
+        "name": "Slipstream Cartographer",
+        "desc": "As a kid you created maps of your neighborhood's alleys and arranged treasure hunts for your friends. Your father said your scribblings were genius (they were not) and paid Old Man Fourad to teach you the ancient art of mapmaking. He was a tedious blowhard but his maps from The Old Horizon sent your mind spinning. You looked to the stars and set your mind to reach those distant and uncharted territories.",
+        "talent": "Cartographer"
+      },
+      {
+        "name": "Diaspora Historian",
+        "desc": "Sure the Old Horizon is interesting in its way, but the real underpinning of modern society is the Diaspora itself. People would be amazed how much can be traced to certain individuals among the original Diaspora fleet crew. You wrote extensively on the subject and even got published in some minor journals. Still, so much remains to be discovered. Maybe someday you will return to your subject.",
+        "talent": "Historian"
+      },
+      {
+        "name": "Cave Botanist",
+        "desc": "Flowers and plants have always perplexed you. The power of a seed to become a tree, the power of a fungus to spread its mycelium net over miles of caves and the uncanny power of the Blight to subvert it all. Working in the Cave Gardens as a kid, you learned the basics of horticulture and hydroponics. Traveling afar to other systems exposed you to the deeper universe of botany and the Blight.",
+        "talent": "Botanist"
+      },
+      {
+        "name": "Builder Archaeologist",
+        "desc": "There is nothing more important than understanding the Builders' monuments. Reading in pamphlet news about far away expeditions, trawling the open libraries of Ship City for all texts about the new archaeology of the Builders. Finally being allowed to examine shards under the tutelage of master archaeologist Sunna, you knew. You had to see the ruins with your own eyes.",
+        "talent": "Archaeology"
+      }
+    ],
+    "7": [
+      {
+        "name": "Dust Runner",
+        "desc": "They call the Blight a curse, but is it really? It made your life more exciting, that’s for sure. Running Dust for the Toads all over the Rock was an easy choice. Get a package. Deliver it to the right hands. Get paid. Easy. The Guilds hate your guts and hunt you all over. But, hey, it’s not your fault their members want to ride the Red Mist, is it? Supply and demand, darling. They’ll never catch you. Navigators, Machinists – doesn’t matter, you’re too clever, they’re too slow. There are always ways to get to where you want to be.",
+        "talent": "Streetwise"
+      },
+      {
+        "name": "Tech Smuggler",
+        "desc": "There are too many rules in this place. It’s getting ridiculous! The Guild’s quarantine rules for shards is a joke. Danger of rot infestation? Pfft! They’re just scared of the competition. And the stuffy Coriolites guard the Old World tech like they own it. Well, screw all of them! You have as much right to get in on the action as anyone. You’ve been smuggling shards from the mines and Old Horizon tech from the Graveyard for years and nothing has gone wrong yet. Well, nothing major…",
+        "talent": "Electro- Specialist"
+      },
+      {
+        "name": "Guild Spy",
+        "desc": "Empires weren’t built in a day, and neither were Guilds. The power and glory of the Guild were built by people like you – those who were prepared to go the extra mile for the information that kept your Guild one step ahead. It had always been for the greater good; what was good for the Guild was good for Ship City. Most people were too ignorant to understand that. But you never needed their thanks. You were happy to work in the shadows, planting the seeds for a better future.",
+        "talent": "Stealthy"
+      },
+      {
+        "name": "Alley Thug",
+        "desc": "You were always good with your hands. Your one-two punch was legendary among your friends growing up. You’re not mean, you just know what works: one, two – step away. But, of course, you’re a great brawler if the situation demands it. You’re used to odd jobs: bouncer, enforcer, debt collector, you’re not picky. People call you a tool, but you don’t care. You know they want you when things get ugly and they need someone to step in and deliver a beating.",
+        "talent": "Thug"
+      },
+      {
+        "name": "Hull Cutter",
+        "desc": "Your mother taught you how to cut up a ship, and you wielded your tools like a butcher’s knife. You and your fellow cutters zig-zagged through Ship City’s misty harbors, stripping gear from vessels to sell on the black market, occasionally throwing in a bit of breaking and entering. You had an eye for what was valuable, what to leave behind, and where a ship’s weak spots were. You had no scruples about stealing (people should really protect their stuff better), but Guild shuttles always had the best loot.",
+        "talent": "Mechanic"
+      },
+      {
+        "name": "Con Artist",
+        "desc": "People were far too gullible. It was as if they wanted to be fooled. They wanted to trust you, even when they knew they shouldn’t, and they craved entertainment. Who were you to deny them that? You were an artist, with a range of characters at your disposal, each perfect for a different performance.",
+        "talent": "Actor"
+      }
+    ],
+    "8": [
+      {
+        "name": "Tugship Pilot",
+        "desc": "Navigating the miasma between Ship City and Hull Town, or steering Greatships and Sloops into the docks of Aluminum Bay – this was your daily work. You performed your tasks with a steadfast and clunky Tugger, obviously not your own but belonging to one of the big shipping companies. After a day’s work, you relaxed in one of the cantinas of the ‘Bay, smoking a long pipe as all spacefarers did.",
+        "talent": "Shuttle Pilot"
+      },
+      {
+        "name": "Hull Warden",
+        "desc": "Whether walking with a lantern through the vast, cavernous holds of Greatships or creeping through the vents of ore haulers beside the cold vacuum, you could always detect leaks or faulty piping before they became a danger to the ship, its crew, or the entire expedition. You had learned to distinguish the sound of healthy creaking and well-oiled bolts from fractured rivets and the eerie whisper of escaping atmosphere.",
+        "talent": "Investigator"
+      },
+      {
+        "name": "Guild Surveyor",
+        "desc": "The Jumuah System is full of hidden treasures, waiting for any clever soul to discover – whether in the depths of the Dark, across vast stretches of flat space, among wreck clouds, or on the rocky moons of Amalum. Armed with scanners, optimeters, and other strange devices, you scoured and claimed whatever you found for the Guilds of Ship City. It was a lonely but fulfilling job, knowing you were essential to the survival of the Diaspora.",
+        "talent": "Scan Operator"
+      },
+      {
+        "name": "Kite Handler",
+        "desc": "Simple machines were just tools, best left to the workers. You, however, learned to operate kites, the intricate, near-intelligent contraptions created by the Machinists. They toiled in the mines of the Rim or served as logic simulacra deep within the Greatships' mainframes. Kites, in your modest opinion, were easier to trust than Birds and nearly as sophisticated.",
+        "talent": "Kite Operator"
+      },
+      {
+        "name": "Lighthouse Keeper",
+        "desc": "Somebody had to lead the way in the dark. That somebody was you. The space lanes of the Jumuah system didn’t keep themselves safe and sound. You serviced the radio buoys, seeded the oxygen caches, and stoked the old reactor with heavy water to keep the light on in your own asteroid lighthouse. From time to time, you got the odd visitor or encountered shipwrecked and sadly solid frozen corpses floating by – but most of the time, it was just you and the will-o’-the- wisp of the Shalenko light.",
+        "talent": "Endurance"
+      },
+      {
+        "name": "Asteroid Hauler",
+        "desc": "Herding boulders across the vast expanse of space was your somewhat menial work – still, you did it with a singular fervor at the helm of your craft. Using the reinforced claws and magnetic field braces of your ship, you steered ice, ore, and mineral meteoroids to the nearest hauler bound for Ship City. When not boxing and bouncing stones ahead of you, you found solace in the quiet solitude of the empty Dark.",
+        "talent": "Exo- Specialist"
+      }
+    ]
+  },
+  "quirks": {
+    "11": "Always fidgets with something",
+    "13": "Triple checks everything",
+    "15": "Always perfumed",
+    "21": "Thrill seeker",
+    "23": "Overly polite",
+    "25": "Very superstitious",
+    "31": "Wears makeup",
+    "33": "Always eating",
+    "35": "Very sleepy",
+    "41": "Easily distracted",
+    "43": "Constantly reading",
+    "45": "Says “hmm” a lot",
+    "51": "Smokes too much",
+    "53": "Sniffs cirra-cirra to calm nerves",
+    "55": "Easily amazed",
+    "61": "Developed sense of fashion",
+    "63": "Eye-catching tattoo",
+    "65": "Fond of jewelry"
+  },
+  "keepsakes": {
+    "11": "Model of the Greatship Hammurabi",
+    "12": "Recruiting pamphlet for the cult of the Lady with a Thousand Eyes, smells of perfume",
+    "13": "Worn silver coin from the Old Horizon",
+    "14": "Ceremonial Coriolite dagger",
+    "15": "Piece of a Builder shard",
+    "16": "Pouch with cirra-cirra leaves",
+    "21": "Well- read zinti novel: Ninhulam – The Golden Star",
+    "22": "Small statuette depicting the Uncreated Spirit",
+    "23": "Yellowed article from the Jumuah Gazette",
+    "24": "Picture plate of a loved one",
+    "25": "Medallion depicting the Coriolite Traveler icon",
+    "26": "Dog eared book: Mind- expanding Fungi Recipes Vol. IV by J.W. Markatalam",
+    "31": "Engraved brass harmonica from Dabaran",
+    "32": "Out of date star chart by master Algebraist Zouridian",
+    "33": "Commemorative amulet celebrating the Three Captains",
+    "34": "Engraved smoking pipe",
+    "35": "Well used journal",
+    "36": "Old automaton doll, can crawl but not walk",
+    "41": "Dried and very rare purple kifu flower",
+    "42": "Tame prana-rat named Zozo",
+    "43": "Flask of makh spirits, brewed in the Turbine Halls in ’77",
+    "44": "Signed biography by veteran delver Jereman: Into the Unknown",
+    "45": "Rock in shifting hues found in the Great Vault of Xu",
+    "46": "Wooden box with colors and paintbrush",
+    "51": "Small music box playing The First and Last Star",
+    "52": "Kuan Theater programme, season of ’86. Signed by actor: To my darling",
+    "53": "Glass bottle with miniature forest",
+    "54": "Bronze medal issued by Navigators Guild Youth League “Junior Algebraist Meritus”",
+    "55": "Broken Dabarani bone mask",
+    "56": "Sealed glass sphere with an ink-black Blight lily",
+    "61": "Old deed to a repurposed ship-dwelling in Hull Town, missing the address.",
+    "62": "Children’s book belonging to a missed sibling: My first Garden",
+    "63": "Letter from uncle that went missing in the Serpentine in ’79",
+    "64": "Worn travel edition of classic game Shroom!",
+    "65": "An old fusillard bullet in a necklace",
+    "66": "A supposed Builder artifact, inert and broken"
+  },
+  "appearances": {
+    "11": "Intense stare",
+    "13": "Unruly hair",
+    "15": "Frayed scarf",
+    "21": "Turban",
+    "23": "Patterned shirt",
+    "25": "Jacket with many pockets",
+    "31": "Long facial scar",
+    "33": "Shaved head",
+    "35": "Kohl-lined eyes",
+    "41": "Leather coat",
+    "43": "Intricate face tattoo",
+    "45": "Henna tattooed hands",
+    "51": "Patterned scarf covering face",
+    "53": "Embroidered cape",
+    "55": "Swirling tunic",
+    "61": "Ancient coin in necklace",
+    "63": "Crimson robe",
+    "65": "Long black jacket"
+  },
+  "reasons": {
+    "11": "It was your childhood dream.",
+    "13": "You want to find out what’s out there.",
+    "15": "You read all of the zinti novels. Several times.",
+    "21": "You had a thirst for knowledge.",
+    "23": "A close friend talked you into it.",
+    "25": "You met a very persuasive recruiter down in the Bay.",
+    "31": "You were always restless.",
+    "33": "You needed the money.",
+    "35": "You wanted to escape the drudgery of everyday life.",
+    "41": "You promised a parent on their deathbed.",
+    "43": "To escape disgrace.",
+    "45": "You had to pay a debt.",
+    "51": "You always chased thrills.",
+    "53": "You wanted to see the inside of a Greatship.",
+    "55": "You were fascinated by the mystery of the Builders.",
+    "61": "You wanted to impress someone you loved.",
+    "63": "You were hunted by someone bad, this was a way out.",
+    "65": "Ship City simply felt too small for you."
+  },
+  "backgrounds": {
+    "1": "Your crew abandoned you in the heart of a delve, leaving you to die alone. Fueled by spite, you survived.",
+    "2": "Your crew succumbed to the lure of a rare artifact, turning on each other. Amid the violence that followed, only you remained.",
+    "3": "Three delves. Three crews. All dead, except you. No crew will accept you now.",
+    "4": "You emerged from an expedition alone, with no memory of what happened to your crew. Since then, alone in the quiet dark of a delve, you experience occasional flashbacks. They are just fragments, but you’ll eventually piece together what happened.",
+    "5": "Your crew went on a delve while you were laid up with an injury. They never returned. Now, you hear their incessant voices, calling your name. Calling you into the dark.",
+    "6": "You’ve seen a vision of the fate that waits for you. It’s best if you’re alone when it happens."
+  },
+  "blight_scars": {
+    "11": {
+      "scar": "Ghost Limb",
+      "effect": "An arm or leg appears spectral or hazy, with bones, tendons, and veins visible through the ghostly appendage."
+    },
+    "13": {
+      "scar": "Void Gaze",
+      "effect": "Your eyes are black and dotted with star-like pinpoints of light, devoid of pupil or iris."
+    },
+    "15": {
+      "scar": "Umbral Aura",
+      "effect": "Wisps of smoke-like shadows wreathe your form, obscuring your figure in unnatural darkness."
+    },
+    "21": {
+      "scar": "Phosphorous Veins",
+      "effect": "Veins and arteries glow with a wavering, neon light beneath your skin."
+    },
+    "23": {
+      "scar": "Thunder Blood",
+      "effect": "Electricity crackles along your skin, arcing outward from you with jolting snaps."
+    },
+    "25": {
+      "scar": "Stoneskin",
+      "effect": "Your flesh has dried and hardened, becoming gray, cracked, and stone-like."
+    },
+    "31": {
+      "scar": "Translucent Skin",
+      "effect": "The inner workings of your body can be glimpsed through your strangely glass-like skin."
+    },
+    "33": {
+      "scar": "Magnetized",
+      "effect": "Metal groans as you pass, drawn toward you inexplicably."
+    },
+    "35": {
+      "scar": "Parasitic Growth",
+      "effect": "Plantlife, fungi, or some other parasitic lifeform winds through your anatomy, emerging in horrific clusters on the surface of your skin."
+    },
+    "41": {
+      "scar": "Extra Digits",
+      "effect": "Additional fingers lend you a dexterity both inhuman and unnerving."
+    },
+    "43": {
+      "scar": "Third Eye",
+      "effect": "An extra eye peers from your forehead, back of your skull, or center of your palm."
+    },
+    "45": {
+      "scar": "Spirit of Rot",
+      "effect": "A writhing darkness precedes your steps, desiccating nearby plantlife and lending an unmistakable stench of decay to the air."
+    },
+    "51": {
+      "scar": "Second Voice",
+      "effect": "You speak with two voices simultaneously – one your own, the other something else entirely."
+    },
+    "61": {
+      "scar": "Arcane Brands",
+      "effect": "Builder glyphs in mutable forms etch every inch of your skin."
+    },
+    "63": {
+      "scar": "Deathly Pallor",
+      "effect": "Were it not for the breath filling your lungs, you might appear dead–pale, gaunt, and exuding an unnatural cold."
+    },
+    "65": {
+      "scar": "Skeletal Barbs",
+      "effect": "Horns, spines, or jutting joints emerge from your skin in bony protrusions."
+    },
+    "66": {
+      "scar": "Revenant",
+      "effect": "You died once already – maybe more than once. But the universe isn’t done with you yet."
+    }
+  },
+  "moniker_prefixes": {
+    "11": "Void",
+    "13": "Star",
+    "15": "Deep",
+    "21": "Dark",
+    "23": "Blight",
+    "25": "Light",
+    "31": "Sun",
+    "33": "Moon",
+    "35": "Night",
+    "41": "Morrow",
+    "43": "Scar",
+    "45": "Sooth",
+    "51": "Tomb",
+    "53": "Ruin",
+    "55": "Grave",
+    "61": "Blood",
+    "63": "Bone",
+    "65": "Soul"
+  },
+  "moniker_suffixes": {
+    "11": "walker",
+    "13": "voice",
+    "15": "wraith",
+    "21": "watcher",
+    "23": "keeper",
+    "25": "speaker",
+    "31": "stitcher",
+    "33": "stride",
+    "35": "taker",
+    "41": "slayer",
+    "43": "breaker",
+    "45": "mind",
+    "51": "gaze",
+    "53": "hand",
+    "55": "robber",
+    "61": "hound",
+    "63": "heart",
+    "65": "culler"
+  },
+  "capital_map": {
+    "Orphanage": "starting_capital_formula_1",
+    "Minig Colony": "starting_capital_formula_1",
+    "Far Colonies": "starting_capital_formula_1",
+    "Aluminium Bay": "starting_capital_formula_1",
+    "The Dome": "starting_capital_formula_2",
+    "The Haze": "starting_capital_formula_2",
+    "Hull Town": "starting_capital_formula_2",
+    "Turbine Halls": "starting_capital_formula_2",
+    "Cave Gardens": "starting_capital_formula_3",
+    "Inner Sanctum": "starting_capital_formula_3",
+    "The Lighthouse": "starting_capital_formula_1",
+    "Scavenger Herd": "starting_capital_formula_1",
+    "Greatship": "starting_capital_formula_2"
+  },
+  "capital_formulas": {
+    "starting_capital_formula_1": {
+      "formula": "D6 × 100",
+      "min": 100,
+      "max": 600,
+      "dice": 1,
+      "mult": 100
+    },
+    "starting_capital_formula_2": {
+      "formula": "3D6 × 100",
+      "min": 300,
+      "max": 1800,
+      "dice": 3,
+      "mult": 100
+    },
+    "starting_capital_formula_3": {
+      "formula": "D6 × 1000",
+      "min": 1000,
+      "max": 6000,
+      "dice": 1,
+      "mult": 1000
+    }
+  },
+  "game_modes": {
+    "normal": {
+      "points": 24,
+      "xp": 0,
+      "capital_bonus": "=INDEX(game_mode[],MATCH(B9,game_mode[game mode],0),MATCH(E8,game_mode[#Headers],0))",
+      "bird_bonus": 0,
+      "background": true,
+      "blight_scar": true,
+      "moniker": true,
+      "carry": "=INDEX(game_mode[],MATCH(B9,game_mode[game mode],0),MATCH(J8,game_mode[#Headers],0))"
+    },
+    "solo": {
+      "points": 28,
+      "xp": 20,
+      "capital_bonus": "D6 × 500 rukh",
+      "bird_bonus": 1,
+      "background": true,
+      "blight_scar": true,
+      "moniker": true,
+      "carry": "STR+6"
+    },
+    "custom": {
+      "points": 26,
+      "xp": 10,
+      "capital_bonus": null,
+      "bird_bonus": 1,
+      "background": false,
+      "blight_scar": false,
+      "moniker": false,
+      "carry": "-"
+    }
+  }
+}

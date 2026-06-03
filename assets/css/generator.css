@@ -1,0 +1,707 @@
+/* =============================================================================
+   Coriolis: The Great Dark — Character Generator
+   Palette identica al cheatsheet originale
+   ============================================================================= */
+
+/* ── CSS VARIABLES ─────────────────────────────────────────────────────────── */
+:root {
+  --bg:      #0a0c12;
+  --panel:   #10141f;
+  --panel2:  #141824;
+  --border:  #2a3050;
+  --gold:    #c8a84b;
+  --gold2:   #e8c96a;
+  --teal:    #3dbcb8;
+  --red:     #c0392b;
+  --orange:  #e67e22;
+  --text:    #d4cfc7;
+  --muted:   #7a8098;
+  --accent:  #1e2640;
+  --green:   #27ae60;
+}
+
+/* ── RESET & BASE ───────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Starfield background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 15%, rgba(200, 168, 75, .4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 40%, rgba(255, 255, 255, .3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 50% 20%, rgba(255, 255, 255, .2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 60%, rgba(200, 168, 75, .3) 0%, transparent 100%),
+    radial-gradient(2px 2px at 60% 10%, rgba(200, 168, 75, .5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 75%, rgba(255, 255, 255, .2) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── LAYOUT ─────────────────────────────────────────────────────────────────── */
+.wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ── HEADER ─────────────────────────────────────────────────────────────────── */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.subtitle-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: .5rem;
+}
+
+.subtitle-line::before,
+.subtitle-line::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold));
+}
+
+.subtitle-line::after {
+  background: linear-gradient(to left, transparent, var(--gold));
+}
+
+.subtitle-line span {
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  font-size: .75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+  color: var(--gold2);
+  text-shadow: 0 0 40px rgba(200, 168, 75, .4);
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-family: 'Cinzel', serif;
+  color: var(--teal);
+  font-size: .8rem;
+  letter-spacing: 3px;
+  margin-top: .4rem;
+  text-transform: uppercase;
+}
+
+/* ── TOP NAV ────────────────────────────────────────────────────────────────── */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
+}
+
+.lang-switch {
+  display: flex;
+  gap: .4rem;
+}
+
+.lang-btn,
+.nav-btn {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: .4rem 1rem;
+  font-family: 'Cinzel', serif;
+  font-size: .75rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all .2s;
+  text-transform: uppercase;
+  text-decoration: none;
+  clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
+  display: inline-block;
+}
+
+.lang-btn:hover,
+.nav-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.lang-btn.active {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+  font-weight: 600;
+}
+
+.nav-btn.active {
+  background: var(--teal);
+  color: var(--bg);
+  border-color: var(--teal);
+  font-weight: 600;
+}
+
+/* ── CONTROLS PANEL ─────────────────────────────────────────────────────────── */
+.controls {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--gold);
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.control-group label {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: .7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .35rem;
+}
+
+.control-group select {
+  width: 100%;
+  background: var(--accent);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: .45rem .7rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: .85rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.control-group select:focus {
+  border-color: var(--gold);
+}
+
+/* ── GENERATE BUTTON ────────────────────────────────────────────────────────── */
+.btn-generate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  width: 100%;
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  color: var(--bg);
+  border: none;
+  padding: .75rem 2rem;
+  font-family: 'Cinzel', serif;
+  font-size: .9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .2s;
+  font-weight: 600;
+  margin-top: .2rem;
+}
+
+.btn-generate:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.btn-generate:active {
+  transform: translateY(0);
+}
+
+.btn-generate:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-generate .spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0, 0, 0, .3);
+  border-top: 2px solid var(--bg);
+  border-radius: 50%;
+  animation: spin .6s linear infinite;
+  display: none;
+}
+
+.btn-generate.loading .spinner {
+  display: block;
+}
+
+.btn-generate.loading .btn-text {
+  opacity: .6;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── ERROR MESSAGE ──────────────────────────────────────────────────────────── */
+.error-msg {
+  background: rgba(192, 57, 43, .1);
+  border: 1px solid var(--red);
+  color: #e74c3c;
+  padding: .7rem 1rem;
+  font-size: .85rem;
+  margin-top: .5rem;
+  display: none;
+}
+
+/* ── CHARACTER SHEET ────────────────────────────────────────────────────────── */
+#sheet {
+  display: none;
+  animation: fadeIn .4s ease;
+}
+
+#sheet.visible {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Sheet header */
+.sheet-header {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--panel);
+  border: 1px solid var(--gold);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.char-name {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: var(--gold2);
+  letter-spacing: 2px;
+}
+
+.char-meta {
+  font-family: 'Cinzel', serif;
+  font-size: .75rem;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: .3rem;
+}
+
+.mode-badge {
+  display: inline-block;
+  background: var(--accent);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: .65rem;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+  padding: .1rem .5rem;
+  text-transform: uppercase;
+  margin-left: .5rem;
+}
+
+.reroll-all {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: .3rem .7rem;
+  font-family: 'Cinzel', serif;
+  font-size: .65rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .2s;
+  text-transform: uppercase;
+}
+
+.reroll-all:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ── SHEET GRID ─────────────────────────────────────────────────────────────── */
+.sheet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+@media (max-width: 700px) {
+  .sheet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .span-2 {
+    grid-column: span 1;
+  }
+}
+
+/* ── CARDS ──────────────────────────────────────────────────────────────────── */
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--gold);
+  padding: 1.1rem 1.3rem;
+  position: relative;
+}
+
+.card.teal   { border-top-color: var(--teal); }
+.card.red    { border-top-color: var(--red); }
+.card.orange { border-top-color: var(--orange); }
+.card.green  { border-top-color: var(--green); }
+
+.card-title {
+  font-family: 'Cinzel', serif;
+  font-size: .7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+.card.teal   .card-title { color: var(--teal); }
+.card.red    .card-title { color: #e74c3c; }
+.card.orange .card-title { color: var(--orange); }
+.card.green  .card-title { color: var(--green); }
+
+.card-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.card-title .roll-badge {
+  font-size: .65rem;
+  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: 1px;
+  background: var(--accent);
+  border: 1px solid var(--border);
+  padding: .1rem .4rem;
+  flex-shrink: 0;
+}
+
+.card-title .reroll-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: .15rem .5rem;
+  font-family: 'Cinzel', serif;
+  font-size: .6rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .2s;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.card-title .reroll-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ── ATTRIBUTES ─────────────────────────────────────────────────────────────── */
+.attr-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .6rem;
+}
+
+.attr-item {
+  background: var(--accent);
+  border: 1px solid var(--border);
+  padding: .5rem .4rem;
+  text-align: center;
+}
+
+.attr-label {
+  font-family: 'Cinzel', serif;
+  font-size: .65rem;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: .2rem;
+}
+
+.attr-value {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.6rem;
+  color: var(--gold2);
+  line-height: 1;
+  display: block;
+}
+
+.attr-item.key-attr {
+  border-color: var(--gold);
+}
+
+.attr-item.key-attr .attr-label {
+  color: var(--gold);
+}
+
+/* ── DERIVED STATS ──────────────────────────────────────────────────────────── */
+.derived-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .5rem;
+}
+
+.derived-item {
+  background: var(--accent);
+  border: 1px solid var(--border);
+  padding: .6rem;
+  text-align: center;
+}
+
+.derived-label {
+  font-family: 'Cinzel', serif;
+  font-size: .6rem;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: .2rem;
+}
+
+.derived-value {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  color: var(--teal);
+  font-weight: 600;
+  display: block;
+}
+
+.derived-formula {
+  font-size: .65rem;
+  color: var(--muted);
+  display: block;
+  margin-top: .1rem;
+}
+
+/* ── TALENT TAGS ────────────────────────────────────────────────────────────── */
+.talent-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: .4rem;
+}
+
+.talent-tag {
+  background: var(--accent);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: .72rem;
+  padding: .2rem .55rem;
+  font-family: 'Cinzel', serif;
+  letter-spacing: .5px;
+}
+
+.talent-tag.free   { border-color: var(--gold);  color: var(--gold); }
+.talent-tag.origin { border-color: var(--teal);  color: var(--teal); }
+
+/* ── TEXT & LABEL UTILITIES ─────────────────────────────────────────────────── */
+.big-value {
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  color: var(--gold2);
+  margin-bottom: .3rem;
+  display: block;
+}
+
+.desc-text {
+  font-size: .82rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.label-sm {
+  font-size: .68rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: 'Cinzel', serif;
+  display: block;
+  margin-bottom: .2rem;
+}
+
+/* ── CAPITAL ────────────────────────────────────────────────────────────────── */
+.capital-value {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.8rem;
+  color: var(--gold2);
+}
+
+.capital-currency {
+  font-family: 'Cinzel', serif;
+  font-size: .9rem;
+  color: var(--gold);
+  margin-left: .4rem;
+}
+
+/* ── SPECIALTY ──────────────────────────────────────────────────────────────── */
+.spec-name {
+  font-family: 'Cinzel', serif;
+  font-size: .95rem;
+  color: var(--gold2);
+  margin-bottom: .4rem;
+}
+
+.spec-desc {
+  font-size: .78rem;
+  color: var(--muted);
+  line-height: 1.5;
+  max-height: 7em;
+  overflow: hidden;
+  position: relative;
+}
+
+.spec-desc::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2em;
+  background: linear-gradient(transparent, var(--panel));
+}
+
+/* ── SOLO CARDS ─────────────────────────────────────────────────────────────── */
+.origin-location {
+  font-family: 'Cinzel', serif;
+  font-size: .9rem;
+  color: var(--teal);
+  margin-bottom: .35rem;
+}
+
+.origin-desc {
+  font-size: .82rem;
+  color: var(--text);
+  font-style: italic;
+  margin-bottom: .5rem;
+}
+
+.scar-name {
+  font-family: 'Cinzel', serif;
+  font-size: .95rem;
+  color: var(--red);
+  margin-bottom: .3rem;
+}
+
+.moniker-full {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.3rem;
+  color: var(--orange);
+  margin-top: .4rem;
+}
+
+.moniker-parts {
+  margin-top: .4rem;
+  font-size: .72rem;
+  color: var(--muted);
+}
+
+/* ── ACTIONS BAR ────────────────────────────────────────────────────────────── */
+.actions-bar {
+  display: flex;
+  gap: .6rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.action-btn {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: .5rem 1.2rem;
+  font-family: 'Cinzel', serif;
+  font-size: .75rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all .2s;
+  text-transform: uppercase;
+}
+
+.action-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.action-btn.primary {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+  font-weight: 600;
+}
+
+.action-btn.primary:hover {
+  filter: brightness(1.1);
+}
+
+/* ── FOOTER ─────────────────────────────────────────────────────────────────── */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: .75rem;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
+}
+
+/* ── PRINT ──────────────────────────────────────────────────────────────────── */
+@media print {
+  body                                         { background: #fff; color: #000; }
+  body::before                                 { display: none; }
+  .controls, .top-nav, .actions-bar,
+  .reroll-btn, .reroll-all                     { display: none !important; }
+  .card                                        { border: 1px solid #ccc; border-top: 2px solid #8B6914; background: #fff; }
+  .card-title                                  { color: #8B6914; }
+  .attr-value, .capital-value, .derived-value  { color: #3D3015; }
+  .char-name                                   { color: #3D3015; }
+}
