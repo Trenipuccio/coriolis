@@ -4,6 +4,8 @@
  * Returns JSON with a randomly generated character
  */
 
+use Random\RandomException;
+
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 
@@ -25,12 +27,32 @@ $originId   = $_GET['origin']     ?? null;           // D66 key or null
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
-function d6(): int { return random_int(1, 6); }
-function d8(): int { return random_int(1, 8); }
+function d6(): int {
+    try {
+        return random_int(1, 6);
+    } catch (RandomException $e) {
+        return 1;
+    }
+}
+function d8(): int {
+    try {
+        return random_int(1, 8);
+    } catch (RandomException $e) {
+        return 1;
+    }
+}
 
 function rollD66(): int {
-    $tens = random_int(1, 6);
-    $ones = random_int(1, 6);
+    try {
+        $tens = random_int(1, 6);
+    } catch (RandomException $e) {
+        $tens = 1;
+    }
+    try {
+        $ones = random_int(1, 6);
+    } catch (RandomException $e) {
+        $ones = 1;
+    }
     return (int)($tens * 10 + $ones);
 }
 
@@ -53,18 +75,6 @@ function pickByD66(array $table): array {
     return [(int)$best, $table[$best]];
 }
 
-function pickByD6(array $table) {
-    $keys = array_keys($table);
-    sort($keys);
-    $roll = d6();
-    $best = $keys[0];
-    foreach ($keys as $k) {
-        if ((int)$k <= $roll) $best = $k;
-        else break;
-    }
-    return $table[$best];
-}
-
 // ─── Roll Attributes (point buy) ─────────────────────────────────────────────
 function rollAttributes(int $points): array {
     // All start at 2, distribute remaining points (max 5 per attribute)
@@ -76,7 +86,7 @@ function rollAttributes(int $points): array {
         shuffle($names);
         $bumped = false;
         foreach ($names as $a) {
-            if ($attrs[$a] < 5 && $pool > 0) {
+            if ($attrs[$a] < 5) {
                 $attrs[$a]++;
                 $pool--;
                 $bumped = true;
@@ -97,8 +107,14 @@ function derivedStats(array $attrs, string $mode, string $carry): array {
     $ins = $attrs['INS'];
     $emp = $attrs['EMP'];
 
-    $carryVal = ($carry === 'STR+6') ? $str + 6 :
-                (($carry === 'STR+4') ? $str + 4 : $str + 4);
+    if($mode == "solo"){
+        $carryVal = $str + 6;
+    }else {
+        $carryVal = match ($carry) {
+            'STR+6' => $str + 6,
+            default => $str + 4,
+        };
+    }
 
     return [
         'health'   => $str + $agi,
@@ -411,7 +427,7 @@ $specTransIT = [
     ],
     'Hull Cutter' => [
         'name' => 'Tagliatore di Scafi',
-        'desc' => 'Tua madre ti ha insegnato come tagliare una nave, e maneggiavi gli attrezzi come un coltello da macellaio. Tu e i tuoi compagni zigzagavate nei nebbiosı porti di Ship City, strappando attrezzatura dalle navi per venderla al mercato nero. Avevi occhio per ciò che era di valore e per i punti deboli di una nave. Non avevi scrupoli a rubare, ma le navette della Gilda avevano sempre il bottino migliore.',
+        'desc' => 'Tua madre ti ha insegnato come tagliare una nave, e maneggiavi gli attrezzi come un coltello da macellaio. Tu e i tuoi compagni zigzagavate nei nebbiosi porti di Ship City, strappando attrezzatura dalle navi per venderla al mercato nero. Avevi occhio per ciò che era di valore e per i punti deboli di una nave. Non avevi scrupoli a rubare, ma le navette della Gilda avevano sempre il bottino migliore.',
     ],
     'Con Artist' => [
         'name' => 'Artista della Truffa',
